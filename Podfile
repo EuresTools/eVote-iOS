@@ -5,6 +5,7 @@ use_frameworks!
 target 'eVote' do
 
 pod 'Alamofire', '~> 1.2'
+pod 'SwiftyJSON', '~> 2.2'
 
 end
 
