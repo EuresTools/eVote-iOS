@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		119A5E7F1B0C7AC50057DDC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119A5E7E1B0C7AC50057DDC6 /* AppDelegate.swift */; };
-		119A5E811B0C7AC50057DDC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119A5E801B0C7AC50057DDC6 /* ViewController.swift */; };
+		119A5E811B0C7AC50057DDC6 /* VoteCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119A5E801B0C7AC50057DDC6 /* VoteCodeViewController.swift */; };
 		119A5E841B0C7AC50057DDC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119A5E821B0C7AC50057DDC6 /* Main.storyboard */; };
 		119A5E861B0C7AC50057DDC6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 119A5E851B0C7AC50057DDC6 /* Images.xcassets */; };
 		119A5E891B0C7AC50057DDC6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 119A5E871B0C7AC50057DDC6 /* LaunchScreen.xib */; };
@@ -29,7 +29,7 @@
 		119A5E791B0C7AC50057DDC6 /* eVote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eVote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		119A5E7D1B0C7AC50057DDC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		119A5E7E1B0C7AC50057DDC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		119A5E801B0C7AC50057DDC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		119A5E801B0C7AC50057DDC6 /* VoteCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteCodeViewController.swift; sourceTree = "<group>"; };
 		119A5E831B0C7AC50057DDC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		119A5E851B0C7AC50057DDC6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		119A5E881B0C7AC50057DDC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				119A5E7E1B0C7AC50057DDC6 /* AppDelegate.swift */,
-				119A5E801B0C7AC50057DDC6 /* ViewController.swift */,
+				119A5E801B0C7AC50057DDC6 /* VoteCodeViewController.swift */,
 				119A5E821B0C7AC50057DDC6 /* Main.storyboard */,
 				119A5E851B0C7AC50057DDC6 /* Images.xcassets */,
 				119A5E871B0C7AC50057DDC6 /* LaunchScreen.xib */,
@@ -161,6 +161,7 @@
 				TargetAttributes = {
 					119A5E781B0C7AC50057DDC6 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 5762VEA4LK;
 					};
 					119A5E8D1B0C7AC50057DDC6 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -212,7 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				119A5E811B0C7AC50057DDC6 /* ViewController.swift in Sources */,
+				119A5E811B0C7AC50057DDC6 /* VoteCodeViewController.swift in Sources */,
 				119A5E7F1B0C7AC50057DDC6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,9 +343,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = eVote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -352,9 +356,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = eVote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -411,6 +418,7 @@
 				119A5E9A1B0C7AC50057DDC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		119A5E9B1B0C7AC50057DDC6 /* Build configuration list for PBXNativeTarget "eVoteTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +427,7 @@
 				119A5E9D1B0C7AC50057DDC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
