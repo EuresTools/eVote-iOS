@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		111874D81B0CCDA700D77686 /* PollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111874D71B0CCDA700D77686 /* PollViewController.swift */; };
 		119A5E7F1B0C7AC50057DDC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119A5E7E1B0C7AC50057DDC6 /* AppDelegate.swift */; };
 		119A5E811B0C7AC50057DDC6 /* VoteCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119A5E801B0C7AC50057DDC6 /* VoteCodeViewController.swift */; };
 		119A5E841B0C7AC50057DDC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119A5E821B0C7AC50057DDC6 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		111874D71B0CCDA700D77686 /* PollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollViewController.swift; sourceTree = "<group>"; };
 		119A5E791B0C7AC50057DDC6 /* eVote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eVote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		119A5E7D1B0C7AC50057DDC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		119A5E7E1B0C7AC50057DDC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				119A5E801B0C7AC50057DDC6 /* VoteCodeViewController.swift */,
 				11C10CDC1B0CB31900C40C01 /* APIClient.swift */,
 				119A5E821B0C7AC50057DDC6 /* Main.storyboard */,
+				111874D71B0CCDA700D77686 /* PollViewController.swift */,
 				119A5E851B0C7AC50057DDC6 /* Images.xcassets */,
 				119A5E871B0C7AC50057DDC6 /* LaunchScreen.xib */,
 				119A5E7C1B0C7AC50057DDC6 /* Supporting Files */,
@@ -294,6 +297,7 @@
 				119A5E811B0C7AC50057DDC6 /* VoteCodeViewController.swift in Sources */,
 				119A5E7F1B0C7AC50057DDC6 /* AppDelegate.swift in Sources */,
 				11C10CDD1B0CB31900C40C01 /* APIClient.swift in Sources */,
+				111874D81B0CCDA700D77686 /* PollViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
