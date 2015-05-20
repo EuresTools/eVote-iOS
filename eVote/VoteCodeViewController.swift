@@ -27,7 +27,10 @@ class VoteCodeViewController: UIViewController {
     
     @IBAction func didPressSubmitButton(sender: AnyObject) {
         let code = codeField.text
-        println(code)
+        APIClient.getPollForCode(code) {
+            (request, response, JSON, error) in
+            println(JSON)
+        }
     }
 }
 
