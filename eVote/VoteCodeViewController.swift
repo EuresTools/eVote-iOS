@@ -45,6 +45,7 @@ class VoteCodeViewController: UIViewController {
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     var pollVC = storyboard.instantiateViewControllerWithIdentifier("PollViewController") as! PollViewController
                     pollVC.poll = poll
+                    pollVC.code = code
                     self.showViewController(pollVC, sender: nil)
                 }
                 else {

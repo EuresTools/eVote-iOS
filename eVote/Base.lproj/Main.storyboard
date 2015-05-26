@@ -10,15 +10,20 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="VoteCodeViewController" customModule="eVote" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="X2V-Pf-r3k"/>
+                        <viewControllerLayoutGuide type="bottom" id="357-HQ-RgO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your voting code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nOI-dX-Vet">
+                                <rect key="frame" x="16" y="285" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqb-Yh-NSd">
-                                <rect key="frame" x="276" y="562" width="49" height="30"/>
+                                <rect key="frame" x="276" y="323" width="49" height="30"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -26,27 +31,14 @@
                                     <action selector="didPressSubmitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dsg-Yt-leP"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter your voting code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfa-1f-564">
-                                <rect key="frame" x="213" y="28" width="174" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your voting code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nOI-dX-Vet">
-                                <rect key="frame" x="16" y="285" width="568" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="nOI-dX-Vet" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="2No-xE-7CQ"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jqb-Yh-NSd" secondAttribute="bottom" constant="8" id="7V5-xg-q28"/>
-                            <constraint firstAttribute="centerX" secondItem="jqb-Yh-NSd" secondAttribute="centerX" id="QHZ-Lw-ciC"/>
-                            <constraint firstItem="nOI-dX-Vet" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="X3F-eb-pBa"/>
-                            <constraint firstAttribute="centerY" secondItem="nOI-dX-Vet" secondAttribute="centerY" id="XRw-6Y-4gi"/>
-                            <constraint firstItem="mfa-1f-564" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="mWW-5k-aZc"/>
-                            <constraint firstAttribute="centerX" secondItem="mfa-1f-564" secondAttribute="centerX" id="zzz-SY-7vJ"/>
+                            <constraint firstItem="jqb-Yh-NSd" firstAttribute="top" secondItem="nOI-dX-Vet" secondAttribute="bottom" constant="8" id="F6H-kq-ugg"/>
+                            <constraint firstItem="nOI-dX-Vet" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QqY-YV-DpN"/>
+                            <constraint firstAttribute="centerX" secondItem="jqb-Yh-NSd" secondAttribute="centerX" constant="-0.5" id="YRS-OU-d7c"/>
+                            <constraint firstAttribute="centerY" secondItem="nOI-dX-Vet" secondAttribute="centerY" id="cGU-u1-vZW"/>
+                            <constraint firstItem="nOI-dX-Vet" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="weh-cu-ok5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AN1-By-Nff"/>
@@ -67,12 +59,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="rH1-xM-PVm" customClass="UITableViewHeaderFooterView">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mai-PN-fz1">
+                                    <rect key="frame" x="258" y="7" width="84" height="30"/>
+                                    <state key="normal" title="Submit Vote">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="didPressSubmitButton:" destination="Ank-fA-tbW" eventType="touchUpInside" id="dvT-Jx-1Iq"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="centerX" secondItem="mai-PN-fz1" secondAttribute="centerX" id="IKU-S8-hjn"/>
+                                <constraint firstAttribute="centerY" secondItem="mai-PN-fz1" secondAttribute="centerY" id="rNO-WC-Fgq"/>
+                            </constraints>
+                        </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bRm-LS-JXq">
+                            <tableViewCell contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" selectionStyle="none" indentationWidth="10" reuseIdentifier="PollOptionTableViewCell" id="bRm-LS-JXq" customClass="PollOptionTableViewCell" customModule="eVote" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bRm-LS-JXq" id="QBZ-ms-2IE">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KwO-Ci-2Vn" customClass="M13Checkbox">
+                                            <rect key="frame" x="557" y="4" width="35" height="35"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JV6-vc-Buo">
+                                            <rect key="frame" x="8" y="11" width="541" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="KwO-Ci-2Vn" firstAttribute="trailing" secondItem="QBZ-ms-2IE" secondAttribute="trailingMargin" id="5nZ-vO-dUe"/>
+                                        <constraint firstAttribute="centerY" secondItem="KwO-Ci-2Vn" secondAttribute="centerY" id="cnS-tw-upq"/>
+                                        <constraint firstItem="JV6-vc-Buo" firstAttribute="leading" secondItem="QBZ-ms-2IE" secondAttribute="leadingMargin" id="nLy-DK-Cpj"/>
+                                        <constraint firstItem="KwO-Ci-2Vn" firstAttribute="leading" secondItem="JV6-vc-Buo" secondAttribute="trailing" constant="8" id="sWQ-e2-Ec6"/>
+                                        <constraint firstAttribute="centerY" secondItem="JV6-vc-Buo" secondAttribute="centerY" id="xcT-NS-Mxy"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="checkBox" destination="KwO-Ci-2Vn" id="Rng-jf-pTr"/>
+                                    <outlet property="optionLabel" destination="JV6-vc-Buo" id="9Jj-4L-Nog"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -80,10 +117,34 @@
                             <outlet property="delegate" destination="Ank-fA-tbW" id="0HE-XX-qEP"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="footerView" destination="rH1-xM-PVm" id="OmE-BB-ilO"/>
+                        <outlet property="headerView" destination="iry-HC-syt" id="gaB-CC-cEv"/>
+                        <outlet property="queryLabel" destination="M9o-bF-eWl" id="Ruo-LN-9hH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6y-Bf-bo6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="iry-HC-syt" customClass="UITableViewHeaderFooterView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9o-bF-eWl">
+                            <rect key="frame" x="8" y="8" width="584" height="44"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="M9o-bF-eWl" firstAttribute="top" secondItem="iry-HC-syt" secondAttribute="top" constant="8" id="3HQ-DK-aCT"/>
+                        <constraint firstAttribute="trailing" secondItem="M9o-bF-eWl" secondAttribute="trailing" constant="8" id="BjH-lW-CJ3"/>
+                        <constraint firstItem="M9o-bF-eWl" firstAttribute="leading" secondItem="iry-HC-syt" secondAttribute="leading" constant="8" id="nkb-8Q-0Il"/>
+                    </constraints>
+                </view>
             </objects>
-            <point key="canvasLocation" x="2237" y="286"/>
+            <point key="canvasLocation" x="2226" y="286"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ccJ-Yq-22d">

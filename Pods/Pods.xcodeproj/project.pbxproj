@@ -7,295 +7,369 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13E4391EE8230F935B7D813A /* Pods-eVote-Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A841B12D7A3DD15B2E48306F /* Pods-eVote-Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1EFDABEF2209B6156C0EF43F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D6EA6FFA43845F75030DF4 /* Request.swift */; };
-		27AD8A035E98C5CFDF9C04B8 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E9FC565F60BE4B1990A2D4 /* ParameterEncoding.swift */; };
-		56959ED26E59DA6512343941 /* Pods-eVote-SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F13AD2CBD73D2A7FFD6864D /* Pods-eVote-SwiftyJSON-dummy.m */; };
-		642C6888057607867E4116EF /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89258A7D3F3B4AED7DBDF6CF /* Download.swift */; };
-		64DDC10E07D8D76CB12A6485 /* Pods-eVote-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C32D1B0E9A2E70006E6DC321 /* Pods-eVote-dummy.m */; };
-		6D62D3B9B8A3CA11D1458BBE /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52A2D2F853A973E415732A /* Validation.swift */; };
-		71004E94E440CA86AD0A73F5 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD689AC3137EAD2E74B3AAB /* SwiftyJSON.swift */; };
-		7246CA3F37A546B51129831A /* Pods-eVote-Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBB44F7638693FB89D6C658 /* Pods-eVote-Alamofire-dummy.m */; };
-		7E57FDD9C9FABF82D24E7507 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D974A088429413FACFC2D82A /* Foundation.framework */; };
-		8237A825A93BED0595F3D9EE /* Pods-eVote-SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B9DB7A8F7BF7C5271659952 /* Pods-eVote-SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A58FC13E508666757A6BB3CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D974A088429413FACFC2D82A /* Foundation.framework */; };
-		B1E05D6BEF37F31EDED84814 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4B029356E0D63AE5A4266 /* Manager.swift */; };
-		C24CA46433CF4F8E55D7BAFE /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591602E903AEE151892CD2F1 /* Alamofire.swift */; };
-		D9DBBBC0E13D05FFF8F14F07 /* Pods-eVote-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 16E2FD37F047576C8129036C /* Pods-eVote-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DC4E2ADD633F524583A7E786 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D974A088429413FACFC2D82A /* Foundation.framework */; };
-		EFA024B053B9E25A9CFEE617 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC347F7D473E4317EC987B /* Upload.swift */; };
-		F3B0D055A7ED49F38867590E /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1FD5DDB6E0AD602112C017 /* ResponseSerialization.swift */; };
+		0504FD438E1D9960D131A772 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA481D3588344396674C1A04 /* Manager.swift */; };
+		1405D64CA1ABFDACFFE76D92 /* M13Checkbox.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8265D9162D82A879FB9155 /* M13Checkbox.m */; };
+		215D85DE10CCC4B9AF3CFCA7 /* Pods-eVote-M13Checkbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CDF8115C05AAC2CD86CD6D32 /* Pods-eVote-M13Checkbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37B67F10B90C8830708D6199 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3C874EC8D6D94EC576DC67 /* SwiftyJSON.swift */; };
+		3C359A653EB70E0EA1088088 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215311B7469B39006CFE6D18 /* ParameterEncoding.swift */; };
+		50C9493FCDE17AE5878D8E88 /* Pods-eVote-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1B844A62109DEA8B252C00 /* Pods-eVote-dummy.m */; };
+		5C6B4E8C0158C34600272013 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC94D65AA6C1AAE4C125401 /* Request.swift */; };
+		60EB32786CD6602E60633016 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E32F192BD6EE7FC9AAF62F4B /* Foundation.framework */; };
+		63B476D03461743DEFF84598 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E32F192BD6EE7FC9AAF62F4B /* Foundation.framework */; };
+		6528E0052EC1BBA31D0E8CDB /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E462BB714A8AF0453256FE /* ResponseSerialization.swift */; };
+		6F2E6ED47CD30A6A4254BF57 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DCE566D240FC8579E5254A /* Download.swift */; };
+		702D578269C1C907BF3CEC14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E32F192BD6EE7FC9AAF62F4B /* Foundation.framework */; };
+		8422309E537FBF509FC61858 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5EFBA2C757F9BC5588931B /* Upload.swift */; };
+		92CE2105F15DCAABBC27A070 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41DEC083E5FB145DD32B06CA /* UIKit.framework */; };
+		A1F1AE005C38A35B7310F568 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F296FAA7B64A10F45AE7E81 /* Validation.swift */; };
+		AF1FEFA72A21F1ED1E76184D /* Pods-eVote-Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 210CCACA5EB0633D21D8A745 /* Pods-eVote-Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3D10D466198E6F92696DDFA /* Pods-eVote-M13Checkbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FEF803C1593EE398A2007C /* Pods-eVote-M13Checkbox-dummy.m */; };
+		BD61FF0556F63219FD0D8E28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E32F192BD6EE7FC9AAF62F4B /* Foundation.framework */; };
+		C54CC263B4BAA4A2A46ECCA4 /* Pods-eVote-SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9211433018B64519EF12F5 /* Pods-eVote-SwiftyJSON-dummy.m */; };
+		D571604AC80C163DB6A3050C /* M13Checkbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 520EFB6D97822321CEED9CEB /* M13Checkbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8C41F5888B363372A2E6532 /* Pods-eVote-Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DA8FCE7B0EA32805B97BAB /* Pods-eVote-Alamofire-dummy.m */; };
+		DBA89A7A284F5DD0D505C9B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0815E68C5DD0E38452874F8 /* CoreGraphics.framework */; };
+		E20CFA88A6EAC1DB32E610A4 /* Pods-eVote-SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D67848081DDF2FFF238C4E50 /* Pods-eVote-SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC9E62ED670A32E2899DC86A /* Pods-eVote-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 871C26E8B561530D8F13F42E /* Pods-eVote-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FDC93D9904851EB9A579D5F6 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2AFF574F2F695949AFD81 /* Alamofire.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A8E956C4B8AAFF1637172003 /* PBXContainerItemProxy */ = {
+		3D290F0752A7F336AF051E89 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 970F2AEA06BB0A66616017FD /* Project object */;
+			containerPortal = 7F78436FC32505A005248666 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 68AEE0855F30C2F75301B569;
+			remoteGlobalIDString = AF36847783CA9966E7A2282E;
+			remoteInfo = "Pods-eVote-M13Checkbox";
+		};
+		507DF5F1A2DEB86DC2ECA4AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F78436FC32505A005248666 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE79033BDAD6622F8CB7D3EE;
 			remoteInfo = "Pods-eVote-SwiftyJSON";
 		};
-		F6C857B70A5E58907C82A519 /* PBXContainerItemProxy */ = {
+		7621F49EBA5A5B67958F33C9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 970F2AEA06BB0A66616017FD /* Project object */;
+			containerPortal = 7F78436FC32505A005248666 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9CD17410C71F2009F513B239;
+			remoteGlobalIDString = B930EF91937E9723A605D325;
 			remoteInfo = "Pods-eVote-Alamofire";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06E491B4962D77FBC83717A5 /* Pods-eVote-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-eVote-resources.sh"; sourceTree = "<group>"; };
-		0E774DAAA583D4D0FCC8B700 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0F13AD2CBD73D2A7FFD6864D /* Pods-eVote-SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-eVote-SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
-		16E2FD37F047576C8129036C /* Pods-eVote-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-eVote-umbrella.h"; sourceTree = "<group>"; };
-		175E11AFAA005C6C0A2DA218 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B9DB7A8F7BF7C5271659952 /* Pods-eVote-SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-eVote-SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
-		1D97C3C3E831DBC682920019 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		214489CE10796542E7022794 /* Pods-eVote-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-eVote-acknowledgements.plist"; sourceTree = "<group>"; };
-		26B4E40639E0B85FC0703CBF /* Pods-eVote.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-eVote.modulemap"; sourceTree = "<group>"; };
-		2DE60F6A7D0DED2B47F2BB00 /* Pods-eVote-SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-eVote-SwiftyJSON.xcconfig"; sourceTree = "<group>"; };
-		412577A610D828DC103EAA9C /* Pods-eVote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-eVote.debug.xcconfig"; sourceTree = "<group>"; };
-		4D52A2D2F853A973E415732A /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
-		591602E903AEE151892CD2F1 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		65C0965C6BEB62A2EEE25A3C /* Pods-eVote-Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-eVote-Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		7F773704A5785699249C8ABA /* Pods-eVote-Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-eVote-Alamofire.xcconfig"; sourceTree = "<group>"; };
-		7FBB44F7638693FB89D6C658 /* Pods-eVote-Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-eVote-Alamofire-dummy.m"; sourceTree = "<group>"; };
-		7FF9A756F637FD156A6FABF6 /* Pods-eVote-Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-eVote-Alamofire.modulemap"; sourceTree = "<group>"; };
-		89258A7D3F3B4AED7DBDF6CF /* Download.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Download.swift; path = Source/Download.swift; sourceTree = "<group>"; };
-		89D1CC57C0220D19B2F654BA /* Pods-eVote-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-eVote-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9095B91A93DC6B1E8BBCC973 /* Pods_eVote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eVote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		97D6EA6FFA43845F75030DF4 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
-		994D0B7D621A8322E3278238 /* Pods-eVote-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-eVote-frameworks.sh"; sourceTree = "<group>"; };
-		A3E9FC565F60BE4B1990A2D4 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		A841B12D7A3DD15B2E48306F /* Pods-eVote-Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-eVote-Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		AC3AC782AD4FCA2043A306DA /* Pods-eVote-SwiftyJSON-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-eVote-SwiftyJSON-Private.xcconfig"; sourceTree = "<group>"; };
-		AC86F646B932E7CF8C2CF8CB /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDC4B029356E0D63AE5A4266 /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Manager.swift; sourceTree = "<group>"; };
-		C295E757C0AC078C078C0E05 /* Pods-eVote-SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-eVote-SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
-		C32D1B0E9A2E70006E6DC321 /* Pods-eVote-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-eVote-dummy.m"; sourceTree = "<group>"; };
-		CCD689AC3137EAD2E74B3AAB /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
-		D0FF4626810456340CB702D7 /* Pods-eVote-Alamofire-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-eVote-Alamofire-Private.xcconfig"; sourceTree = "<group>"; };
-		D1E96D31EF0F223E0C28F4AF /* Pods-eVote-SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-eVote-SwiftyJSON.modulemap"; sourceTree = "<group>"; };
-		D974A088429413FACFC2D82A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		E3C55C829D801BEBFDC464DB /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		EE9E46FD7E833F69015BFDBD /* Pods-eVote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-eVote.release.xcconfig"; sourceTree = "<group>"; };
-		F76D80EE07CCC72306B00450 /* Pods-eVote-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-eVote-environment.h"; sourceTree = "<group>"; };
-		FA1FD5DDB6E0AD602112C017 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		FAAC347F7D473E4317EC987B /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
-		FD7931BA366A6BE4F076FC85 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02FEF803C1593EE398A2007C /* Pods-eVote-M13Checkbox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-eVote-M13Checkbox-dummy.m"; sourceTree = "<group>"; };
+		04F2AFF574F2F695949AFD81 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		0ACB32188ADD4A1C52E1ECCB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BB15335EEDE5B6499BE17A9 /* Pods-eVote-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-eVote-frameworks.sh"; sourceTree = "<group>"; };
+		0C0C1725D68BA1EF9C30C1B5 /* Pods-eVote-Alamofire-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-eVote-Alamofire-Private.xcconfig"; sourceTree = "<group>"; };
+		0F296FAA7B64A10F45AE7E81 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		1E758A51E7D95311CDE004D0 /* Pods-eVote-M13Checkbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-eVote-M13Checkbox.xcconfig"; sourceTree = "<group>"; };
+		1EB6AD554A7AEEDD8AFF5991 /* Pods-eVote-M13Checkbox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-eVote-M13Checkbox-prefix.pch"; sourceTree = "<group>"; };
+		210CCACA5EB0633D21D8A745 /* Pods-eVote-Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-eVote-Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		215311B7469B39006CFE6D18 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		2E4DFF690BB22ECC1398560B /* Pods-eVote-Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-eVote-Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		2FD241210747AE6E8C264531 /* Pods-eVote-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-eVote-environment.h"; sourceTree = "<group>"; };
+		39F37AA9A91EBCB0D6269967 /* Pods-eVote-SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-eVote-SwiftyJSON.modulemap"; sourceTree = "<group>"; };
+		3C87DB976040B3101E3E1F8C /* Pods-eVote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-eVote.debug.xcconfig"; sourceTree = "<group>"; };
+		41DEC083E5FB145DD32B06CA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		41F1603CC702950EE8E7FB73 /* Pods_eVote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eVote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4748214BD1C64B76B3C183C2 /* Pods-eVote-M13Checkbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-eVote-M13Checkbox.modulemap"; sourceTree = "<group>"; };
+		4D69F446741B08217AFFDB93 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		520EFB6D97822321CEED9CEB /* M13Checkbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13Checkbox.h; path = Classes/M13Checkbox.h; sourceTree = "<group>"; };
+		544D405E83F3621F13827658 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5525323EDD014DD48974B0A6 /* Pods-eVote-Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-eVote-Alamofire.xcconfig"; sourceTree = "<group>"; };
+		55DA8FCE7B0EA32805B97BAB /* Pods-eVote-Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-eVote-Alamofire-dummy.m"; sourceTree = "<group>"; };
+		58E462BB714A8AF0453256FE /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		59A5FB2B695E1221DD231A2A /* Pods-eVote-SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-eVote-SwiftyJSON.xcconfig"; sourceTree = "<group>"; };
+		5A5EFBA2C757F9BC5588931B /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
+		6169AB37A5205DD7D90DC4D4 /* M13Checkbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = M13Checkbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69E2439A8B1558294B6EA295 /* Pods-eVote.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-eVote.modulemap"; sourceTree = "<group>"; };
+		7B27985503163E500758551F /* Pods-eVote-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-eVote-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7F1AF7814973D287BA5F592E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		871C26E8B561530D8F13F42E /* Pods-eVote-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-eVote-umbrella.h"; sourceTree = "<group>"; };
+		88B7E7874C428288076F348E /* Pods-eVote-SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-eVote-SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		8B9211433018B64519EF12F5 /* Pods-eVote-SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-eVote-SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		8EC94D65AA6C1AAE4C125401 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		8F0B6ED06A7B7FBEED9BD7D9 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		913C4BBC3A1D92D93108A0A1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F1B305D7207839A11625DDC /* Pods-eVote-Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-eVote-Alamofire.modulemap"; sourceTree = "<group>"; };
+		A72D58254FEAD6F34AB0B537 /* Pods-eVote-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-eVote-acknowledgements.plist"; sourceTree = "<group>"; };
+		AF8265D9162D82A879FB9155 /* M13Checkbox.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13Checkbox.m; path = Classes/M13Checkbox.m; sourceTree = "<group>"; };
+		B3DCE566D240FC8579E5254A /* Download.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Download.swift; path = Source/Download.swift; sourceTree = "<group>"; };
+		CD635EF7E7F06DC7BACE101F /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDF8115C05AAC2CD86CD6D32 /* Pods-eVote-M13Checkbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-eVote-M13Checkbox-umbrella.h"; sourceTree = "<group>"; };
+		D67848081DDF2FFF238C4E50 /* Pods-eVote-SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-eVote-SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		DA56C25A085ABC734D5D6DA0 /* Pods-eVote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-eVote.release.xcconfig"; sourceTree = "<group>"; };
+		E0815E68C5DD0E38452874F8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		E32F192BD6EE7FC9AAF62F4B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E9F4B08F6DBC1921DCFE2594 /* Pods-eVote-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-eVote-resources.sh"; sourceTree = "<group>"; };
+		EE1B844A62109DEA8B252C00 /* Pods-eVote-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-eVote-dummy.m"; sourceTree = "<group>"; };
+		EF3C874EC8D6D94EC576DC67 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		F5BFEE454C9B5EDFD995F852 /* Pods-eVote-M13Checkbox-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-eVote-M13Checkbox-Private.xcconfig"; sourceTree = "<group>"; };
+		F5DF8866F7C93B895B17F463 /* Pods-eVote-SwiftyJSON-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-eVote-SwiftyJSON-Private.xcconfig"; sourceTree = "<group>"; };
+		FA481D3588344396674C1A04 /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Manager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1D4ED913A838F74A5E7823FB /* Frameworks */ = {
+		491FBE646AA26CCB980614DE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A58FC13E508666757A6BB3CA /* Foundation.framework in Frameworks */,
+				702D578269C1C907BF3CEC14 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A2488E1E4170C41D9A6EEEE2 /* Frameworks */ = {
+		66A5C33B4D01EE2728D55577 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC4E2ADD633F524583A7E786 /* Foundation.framework in Frameworks */,
+				DBA89A7A284F5DD0D505C9B7 /* CoreGraphics.framework in Frameworks */,
+				63B476D03461743DEFF84598 /* Foundation.framework in Frameworks */,
+				92CE2105F15DCAABBC27A070 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E489C5C0746270BACA78B4CF /* Frameworks */ = {
+		6FF9254D8D2A5C208A002179 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E57FDD9C9FABF82D24E7507 /* Foundation.framework in Frameworks */,
+				BD61FF0556F63219FD0D8E28 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5FC82B46B9BEDB1D46EC0C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60EB32786CD6602E60633016 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D0555F9FDD4237574065057 = {
+		1762962795F3409D0120CF9E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E3C55C829D801BEBFDC464DB /* Podfile */,
-				F5B11A69BF0FFBD10CBDAA5F /* Frameworks */,
-				76DECA65CECC9C1FB539FAC0 /* Pods */,
-				9D8854FB0BFBC5247846C95E /* Products */,
-				FE51E28D58C336F4A15F4671 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		12AC60945A252DB1256A5D7C /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1D97C3C3E831DBC682920019 /* Info.plist */,
-				D1E96D31EF0F223E0C28F4AF /* Pods-eVote-SwiftyJSON.modulemap */,
-				2DE60F6A7D0DED2B47F2BB00 /* Pods-eVote-SwiftyJSON.xcconfig */,
-				AC3AC782AD4FCA2043A306DA /* Pods-eVote-SwiftyJSON-Private.xcconfig */,
-				0F13AD2CBD73D2A7FFD6864D /* Pods-eVote-SwiftyJSON-dummy.m */,
-				C295E757C0AC078C078C0E05 /* Pods-eVote-SwiftyJSON-prefix.pch */,
-				1B9DB7A8F7BF7C5271659952 /* Pods-eVote-SwiftyJSON-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-eVote-SwiftyJSON";
-			sourceTree = "<group>";
-		};
-		336180AADC35EC15B8B711BE /* SwiftyJSON */ = {
-			isa = PBXGroup;
-			children = (
-				CCD689AC3137EAD2E74B3AAB /* SwiftyJSON.swift */,
-				12AC60945A252DB1256A5D7C /* Support Files */,
-			);
-			path = SwiftyJSON;
-			sourceTree = "<group>";
-		};
-		76DECA65CECC9C1FB539FAC0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				78158A25619B9520D3B3A0DF /* Alamofire */,
-				336180AADC35EC15B8B711BE /* SwiftyJSON */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		78158A25619B9520D3B3A0DF /* Alamofire */ = {
-			isa = PBXGroup;
-			children = (
-				591602E903AEE151892CD2F1 /* Alamofire.swift */,
-				89258A7D3F3B4AED7DBDF6CF /* Download.swift */,
-				BDC4B029356E0D63AE5A4266 /* Manager.swift */,
-				A3E9FC565F60BE4B1990A2D4 /* ParameterEncoding.swift */,
-				97D6EA6FFA43845F75030DF4 /* Request.swift */,
-				FA1FD5DDB6E0AD602112C017 /* ResponseSerialization.swift */,
-				FAAC347F7D473E4317EC987B /* Upload.swift */,
-				4D52A2D2F853A973E415732A /* Validation.swift */,
-				8EAEAF6578E6C85943560B91 /* Support Files */,
-			);
-			path = Alamofire;
-			sourceTree = "<group>";
-		};
-		8EAEAF6578E6C85943560B91 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FD7931BA366A6BE4F076FC85 /* Info.plist */,
-				7FF9A756F637FD156A6FABF6 /* Pods-eVote-Alamofire.modulemap */,
-				7F773704A5785699249C8ABA /* Pods-eVote-Alamofire.xcconfig */,
-				D0FF4626810456340CB702D7 /* Pods-eVote-Alamofire-Private.xcconfig */,
-				7FBB44F7638693FB89D6C658 /* Pods-eVote-Alamofire-dummy.m */,
-				65C0965C6BEB62A2EEE25A3C /* Pods-eVote-Alamofire-prefix.pch */,
-				A841B12D7A3DD15B2E48306F /* Pods-eVote-Alamofire-umbrella.h */,
+				7F1AF7814973D287BA5F592E /* Info.plist */,
+				9F1B305D7207839A11625DDC /* Pods-eVote-Alamofire.modulemap */,
+				5525323EDD014DD48974B0A6 /* Pods-eVote-Alamofire.xcconfig */,
+				0C0C1725D68BA1EF9C30C1B5 /* Pods-eVote-Alamofire-Private.xcconfig */,
+				55DA8FCE7B0EA32805B97BAB /* Pods-eVote-Alamofire-dummy.m */,
+				2E4DFF690BB22ECC1398560B /* Pods-eVote-Alamofire-prefix.pch */,
+				210CCACA5EB0633D21D8A745 /* Pods-eVote-Alamofire-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-eVote-Alamofire";
 			sourceTree = "<group>";
 		};
-		9D8854FB0BFBC5247846C95E /* Products */ = {
+		18BD5659A8740EF652516DB7 /* SwiftyJSON */ = {
 			isa = PBXGroup;
 			children = (
-				175E11AFAA005C6C0A2DA218 /* Alamofire.framework */,
-				9095B91A93DC6B1E8BBCC973 /* Pods_eVote.framework */,
-				AC86F646B932E7CF8C2CF8CB /* SwiftyJSON.framework */,
+				EF3C874EC8D6D94EC576DC67 /* SwiftyJSON.swift */,
+				B8CDCECB076B488CBE3CEB01 /* Support Files */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		1B7DC0CEE1981EB53996A756 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				902526DFFD8A805B8C3533DE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		349077CDE2938D6E08B619F9 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EDBB661720FEC1AF7A7EB838 /* Pods-eVote */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		35F9043BA6D812B7A0BB5CE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				544D405E83F3621F13827658 /* Alamofire.framework */,
+				6169AB37A5205DD7D90DC4D4 /* M13Checkbox.framework */,
+				41F1603CC702950EE8E7FB73 /* Pods_eVote.framework */,
+				CD635EF7E7F06DC7BACE101F /* SwiftyJSON.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B41F833376FC2AAB5EE959E0 /* Pods-eVote */ = {
+		6CFABA6058DE9E46185AA19E /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				0E774DAAA583D4D0FCC8B700 /* Info.plist */,
-				26B4E40639E0B85FC0703CBF /* Pods-eVote.modulemap */,
-				89D1CC57C0220D19B2F654BA /* Pods-eVote-acknowledgements.markdown */,
-				214489CE10796542E7022794 /* Pods-eVote-acknowledgements.plist */,
-				C32D1B0E9A2E70006E6DC321 /* Pods-eVote-dummy.m */,
-				F76D80EE07CCC72306B00450 /* Pods-eVote-environment.h */,
-				994D0B7D621A8322E3278238 /* Pods-eVote-frameworks.sh */,
-				06E491B4962D77FBC83717A5 /* Pods-eVote-resources.sh */,
-				16E2FD37F047576C8129036C /* Pods-eVote-umbrella.h */,
-				412577A610D828DC103EAA9C /* Pods-eVote.debug.xcconfig */,
-				EE9E46FD7E833F69015BFDBD /* Pods-eVote.release.xcconfig */,
+				04F2AFF574F2F695949AFD81 /* Alamofire.swift */,
+				B3DCE566D240FC8579E5254A /* Download.swift */,
+				FA481D3588344396674C1A04 /* Manager.swift */,
+				215311B7469B39006CFE6D18 /* ParameterEncoding.swift */,
+				8EC94D65AA6C1AAE4C125401 /* Request.swift */,
+				58E462BB714A8AF0453256FE /* ResponseSerialization.swift */,
+				5A5EFBA2C757F9BC5588931B /* Upload.swift */,
+				0F296FAA7B64A10F45AE7E81 /* Validation.swift */,
+				1762962795F3409D0120CF9E /* Support Files */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		902526DFFD8A805B8C3533DE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E0815E68C5DD0E38452874F8 /* CoreGraphics.framework */,
+				E32F192BD6EE7FC9AAF62F4B /* Foundation.framework */,
+				41DEC083E5FB145DD32B06CA /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		9A0C22085E1E851336B7577C /* M13Checkbox */ = {
+			isa = PBXGroup;
+			children = (
+				520EFB6D97822321CEED9CEB /* M13Checkbox.h */,
+				AF8265D9162D82A879FB9155 /* M13Checkbox.m */,
+				B84C196F0E123E168003B586 /* Support Files */,
+			);
+			path = M13Checkbox;
+			sourceTree = "<group>";
+		};
+		B84C196F0E123E168003B586 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4D69F446741B08217AFFDB93 /* Info.plist */,
+				4748214BD1C64B76B3C183C2 /* Pods-eVote-M13Checkbox.modulemap */,
+				1E758A51E7D95311CDE004D0 /* Pods-eVote-M13Checkbox.xcconfig */,
+				F5BFEE454C9B5EDFD995F852 /* Pods-eVote-M13Checkbox-Private.xcconfig */,
+				02FEF803C1593EE398A2007C /* Pods-eVote-M13Checkbox-dummy.m */,
+				1EB6AD554A7AEEDD8AFF5991 /* Pods-eVote-M13Checkbox-prefix.pch */,
+				CDF8115C05AAC2CD86CD6D32 /* Pods-eVote-M13Checkbox-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-eVote-M13Checkbox";
+			sourceTree = "<group>";
+		};
+		B8CDCECB076B488CBE3CEB01 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0ACB32188ADD4A1C52E1ECCB /* Info.plist */,
+				39F37AA9A91EBCB0D6269967 /* Pods-eVote-SwiftyJSON.modulemap */,
+				59A5FB2B695E1221DD231A2A /* Pods-eVote-SwiftyJSON.xcconfig */,
+				F5DF8866F7C93B895B17F463 /* Pods-eVote-SwiftyJSON-Private.xcconfig */,
+				8B9211433018B64519EF12F5 /* Pods-eVote-SwiftyJSON-dummy.m */,
+				88B7E7874C428288076F348E /* Pods-eVote-SwiftyJSON-prefix.pch */,
+				D67848081DDF2FFF238C4E50 /* Pods-eVote-SwiftyJSON-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-eVote-SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		E104916504750EF8CBEF2634 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6CFABA6058DE9E46185AA19E /* Alamofire */,
+				9A0C22085E1E851336B7577C /* M13Checkbox */,
+				18BD5659A8740EF652516DB7 /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EDBB661720FEC1AF7A7EB838 /* Pods-eVote */ = {
+			isa = PBXGroup;
+			children = (
+				913C4BBC3A1D92D93108A0A1 /* Info.plist */,
+				69E2439A8B1558294B6EA295 /* Pods-eVote.modulemap */,
+				7B27985503163E500758551F /* Pods-eVote-acknowledgements.markdown */,
+				A72D58254FEAD6F34AB0B537 /* Pods-eVote-acknowledgements.plist */,
+				EE1B844A62109DEA8B252C00 /* Pods-eVote-dummy.m */,
+				2FD241210747AE6E8C264531 /* Pods-eVote-environment.h */,
+				0BB15335EEDE5B6499BE17A9 /* Pods-eVote-frameworks.sh */,
+				E9F4B08F6DBC1921DCFE2594 /* Pods-eVote-resources.sh */,
+				871C26E8B561530D8F13F42E /* Pods-eVote-umbrella.h */,
+				3C87DB976040B3101E3E1F8C /* Pods-eVote.debug.xcconfig */,
+				DA56C25A085ABC734D5D6DA0 /* Pods-eVote.release.xcconfig */,
 			);
 			name = "Pods-eVote";
 			path = "Target Support Files/Pods-eVote";
 			sourceTree = "<group>";
 		};
-		CA5A7FEC31456C1C67F22739 /* iOS */ = {
+		F968FB8C2A90499146F00A14 = {
 			isa = PBXGroup;
 			children = (
-				D974A088429413FACFC2D82A /* Foundation.framework */,
+				8F0B6ED06A7B7FBEED9BD7D9 /* Podfile */,
+				1B7DC0CEE1981EB53996A756 /* Frameworks */,
+				E104916504750EF8CBEF2634 /* Pods */,
+				35F9043BA6D812B7A0BB5CE4 /* Products */,
+				349077CDE2938D6E08B619F9 /* Targets Support Files */,
 			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		F5B11A69BF0FFBD10CBDAA5F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CA5A7FEC31456C1C67F22739 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FE51E28D58C336F4A15F4671 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B41F833376FC2AAB5EE959E0 /* Pods-eVote */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		31C88697AFD930B9522EB24E /* Headers */ = {
+		1383F7C4055E1E129E352139 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9DBBBC0E13D05FFF8F14F07 /* Pods-eVote-umbrella.h in Headers */,
+				FC9E62ED670A32E2899DC86A /* Pods-eVote-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A0CBE3A4DD340D7EBB37F7B /* Headers */ = {
+		460FA04654A1D323BF8BD6CE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8237A825A93BED0595F3D9EE /* Pods-eVote-SwiftyJSON-umbrella.h in Headers */,
+				E20CFA88A6EAC1DB32E610A4 /* Pods-eVote-SwiftyJSON-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9417EB81CC86BCA4EBFFB5B0 /* Headers */ = {
+		8AE050CB17E1DE95ED28F50B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13E4391EE8230F935B7D813A /* Pods-eVote-Alamofire-umbrella.h in Headers */,
+				D571604AC80C163DB6A3050C /* M13Checkbox.h in Headers */,
+				215D85DE10CCC4B9AF3CFCA7 /* Pods-eVote-M13Checkbox-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA46E34AC3068363F8221C7B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF1FEFA72A21F1ED1E76184D /* Pods-eVote-Alamofire-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		68AEE0855F30C2F75301B569 /* Pods-eVote-SwiftyJSON */ = {
+		AF36847783CA9966E7A2282E /* Pods-eVote-M13Checkbox */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D98914579CA7443E422DD859 /* Build configuration list for PBXNativeTarget "Pods-eVote-SwiftyJSON" */;
+			buildConfigurationList = 277A97AFADFC23C4C2D77354 /* Build configuration list for PBXNativeTarget "Pods-eVote-M13Checkbox" */;
 			buildPhases = (
-				608658D6EA48D62CDCDCE437 /* Sources */,
-				E489C5C0746270BACA78B4CF /* Frameworks */,
-				3A0CBE3A4DD340D7EBB37F7B /* Headers */,
+				9E84BEBE8CF9D484A5F64593 /* Sources */,
+				66A5C33B4D01EE2728D55577 /* Frameworks */,
+				8AE050CB17E1DE95ED28F50B /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-eVote-SwiftyJSON";
-			productName = "Pods-eVote-SwiftyJSON";
-			productReference = AC86F646B932E7CF8C2CF8CB /* SwiftyJSON.framework */;
+			name = "Pods-eVote-M13Checkbox";
+			productName = "Pods-eVote-M13Checkbox";
+			productReference = 6169AB37A5205DD7D90DC4D4 /* M13Checkbox.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		9CD17410C71F2009F513B239 /* Pods-eVote-Alamofire */ = {
+		B930EF91937E9723A605D325 /* Pods-eVote-Alamofire */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C02F9F9B803BEB55210C4C81 /* Build configuration list for PBXNativeTarget "Pods-eVote-Alamofire" */;
+			buildConfigurationList = 5C095943189024145E9BEB67 /* Build configuration list for PBXNativeTarget "Pods-eVote-Alamofire" */;
 			buildPhases = (
-				D02974333095FEACE341E18E /* Sources */,
-				1D4ED913A838F74A5E7823FB /* Frameworks */,
-				9417EB81CC86BCA4EBFFB5B0 /* Headers */,
+				9C9494312BAA4D878643380F /* Sources */,
+				6FF9254D8D2A5C208A002179 /* Frameworks */,
+				FA46E34AC3068363F8221C7B /* Headers */,
 			);
 			buildRules = (
 			);
@@ -303,110 +377,144 @@
 			);
 			name = "Pods-eVote-Alamofire";
 			productName = "Pods-eVote-Alamofire";
-			productReference = 175E11AFAA005C6C0A2DA218 /* Alamofire.framework */;
+			productReference = 544D405E83F3621F13827658 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B6281D6F5503A83D654FBFE1 /* Pods-eVote */ = {
+		CE79033BDAD6622F8CB7D3EE /* Pods-eVote-SwiftyJSON */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 58D7B22711D1BEA10772ACAA /* Build configuration list for PBXNativeTarget "Pods-eVote" */;
+			buildConfigurationList = 3F5FC0EFFF7B9ABA2C40AE80 /* Build configuration list for PBXNativeTarget "Pods-eVote-SwiftyJSON" */;
 			buildPhases = (
-				6AB1A2917CA54028B30ECE5F /* Sources */,
-				A2488E1E4170C41D9A6EEEE2 /* Frameworks */,
-				31C88697AFD930B9522EB24E /* Headers */,
+				55F5A9EC393C2D798F8B9187 /* Sources */,
+				A5FC82B46B9BEDB1D46EC0C3 /* Frameworks */,
+				460FA04654A1D323BF8BD6CE /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A34FAAAC2D360FD4ABBBFD18 /* PBXTargetDependency */,
-				2C9D285DF7F231861A5D31C6 /* PBXTargetDependency */,
+			);
+			name = "Pods-eVote-SwiftyJSON";
+			productName = "Pods-eVote-SwiftyJSON";
+			productReference = CD635EF7E7F06DC7BACE101F /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DE390F436E4241205713B3F2 /* Pods-eVote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8961C23CFF103F7C83E87BF2 /* Build configuration list for PBXNativeTarget "Pods-eVote" */;
+			buildPhases = (
+				BEB5BD4AFD70E6E66DEC9DAA /* Sources */,
+				491FBE646AA26CCB980614DE /* Frameworks */,
+				1383F7C4055E1E129E352139 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6376917F7A88183B0920BFB7 /* PBXTargetDependency */,
+				3632FD050C2C089A3BB96014 /* PBXTargetDependency */,
+				126C0D07F841B4016261CE7B /* PBXTargetDependency */,
 			);
 			name = "Pods-eVote";
 			productName = "Pods-eVote";
-			productReference = 9095B91A93DC6B1E8BBCC973 /* Pods_eVote.framework */;
+			productReference = 41F1603CC702950EE8E7FB73 /* Pods_eVote.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		970F2AEA06BB0A66616017FD /* Project object */ = {
+		7F78436FC32505A005248666 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = 191A6CDFA5FFC103E0A70A7A /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 5E4ABB93AF2043B99C5BBD73 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 0D0555F9FDD4237574065057;
-			productRefGroup = 9D8854FB0BFBC5247846C95E /* Products */;
+			mainGroup = F968FB8C2A90499146F00A14;
+			productRefGroup = 35F9043BA6D812B7A0BB5CE4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B6281D6F5503A83D654FBFE1 /* Pods-eVote */,
-				9CD17410C71F2009F513B239 /* Pods-eVote-Alamofire */,
-				68AEE0855F30C2F75301B569 /* Pods-eVote-SwiftyJSON */,
+				DE390F436E4241205713B3F2 /* Pods-eVote */,
+				B930EF91937E9723A605D325 /* Pods-eVote-Alamofire */,
+				AF36847783CA9966E7A2282E /* Pods-eVote-M13Checkbox */,
+				CE79033BDAD6622F8CB7D3EE /* Pods-eVote-SwiftyJSON */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		608658D6EA48D62CDCDCE437 /* Sources */ = {
+		55F5A9EC393C2D798F8B9187 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56959ED26E59DA6512343941 /* Pods-eVote-SwiftyJSON-dummy.m in Sources */,
-				71004E94E440CA86AD0A73F5 /* SwiftyJSON.swift in Sources */,
+				C54CC263B4BAA4A2A46ECCA4 /* Pods-eVote-SwiftyJSON-dummy.m in Sources */,
+				37B67F10B90C8830708D6199 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6AB1A2917CA54028B30ECE5F /* Sources */ = {
+		9C9494312BAA4D878643380F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64DDC10E07D8D76CB12A6485 /* Pods-eVote-dummy.m in Sources */,
+				FDC93D9904851EB9A579D5F6 /* Alamofire.swift in Sources */,
+				6F2E6ED47CD30A6A4254BF57 /* Download.swift in Sources */,
+				0504FD438E1D9960D131A772 /* Manager.swift in Sources */,
+				3C359A653EB70E0EA1088088 /* ParameterEncoding.swift in Sources */,
+				D8C41F5888B363372A2E6532 /* Pods-eVote-Alamofire-dummy.m in Sources */,
+				5C6B4E8C0158C34600272013 /* Request.swift in Sources */,
+				6528E0052EC1BBA31D0E8CDB /* ResponseSerialization.swift in Sources */,
+				8422309E537FBF509FC61858 /* Upload.swift in Sources */,
+				A1F1AE005C38A35B7310F568 /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D02974333095FEACE341E18E /* Sources */ = {
+		9E84BEBE8CF9D484A5F64593 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C24CA46433CF4F8E55D7BAFE /* Alamofire.swift in Sources */,
-				642C6888057607867E4116EF /* Download.swift in Sources */,
-				B1E05D6BEF37F31EDED84814 /* Manager.swift in Sources */,
-				27AD8A035E98C5CFDF9C04B8 /* ParameterEncoding.swift in Sources */,
-				7246CA3F37A546B51129831A /* Pods-eVote-Alamofire-dummy.m in Sources */,
-				1EFDABEF2209B6156C0EF43F /* Request.swift in Sources */,
-				F3B0D055A7ED49F38867590E /* ResponseSerialization.swift in Sources */,
-				EFA024B053B9E25A9CFEE617 /* Upload.swift in Sources */,
-				6D62D3B9B8A3CA11D1458BBE /* Validation.swift in Sources */,
+				1405D64CA1ABFDACFFE76D92 /* M13Checkbox.m in Sources */,
+				B3D10D466198E6F92696DDFA /* Pods-eVote-M13Checkbox-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEB5BD4AFD70E6E66DEC9DAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50C9493FCDE17AE5878D8E88 /* Pods-eVote-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2C9D285DF7F231861A5D31C6 /* PBXTargetDependency */ = {
+		126C0D07F841B4016261CE7B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-eVote-SwiftyJSON";
-			target = 68AEE0855F30C2F75301B569 /* Pods-eVote-SwiftyJSON */;
-			targetProxy = A8E956C4B8AAFF1637172003 /* PBXContainerItemProxy */;
+			target = CE79033BDAD6622F8CB7D3EE /* Pods-eVote-SwiftyJSON */;
+			targetProxy = 507DF5F1A2DEB86DC2ECA4AB /* PBXContainerItemProxy */;
 		};
-		A34FAAAC2D360FD4ABBBFD18 /* PBXTargetDependency */ = {
+		3632FD050C2C089A3BB96014 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-eVote-M13Checkbox";
+			target = AF36847783CA9966E7A2282E /* Pods-eVote-M13Checkbox */;
+			targetProxy = 3D290F0752A7F336AF051E89 /* PBXContainerItemProxy */;
+		};
+		6376917F7A88183B0920BFB7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-eVote-Alamofire";
-			target = 9CD17410C71F2009F513B239 /* Pods-eVote-Alamofire */;
-			targetProxy = F6C857B70A5E58907C82A519 /* PBXContainerItemProxy */;
+			target = B930EF91937E9723A605D325 /* Pods-eVote-Alamofire */;
+			targetProxy = 7621F49EBA5A5B67958F33C9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		228E4C3D3EEAC366CEE00B0B /* Release */ = {
+		06EB6D4D253E6C78CB1AEC91 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0FF4626810456340CB702D7 /* Pods-eVote-Alamofire-Private.xcconfig */;
+			baseConfigurationReference = F5BFEE454C9B5EDFD995F852 /* Pods-eVote-M13Checkbox-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -415,14 +523,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-eVote-Alamofire/Pods-eVote-Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-eVote-Alamofire/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-eVote-M13Checkbox/Pods-eVote-M13Checkbox-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-eVote-M13Checkbox/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-eVote-Alamofire/Pods-eVote-Alamofire.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-eVote-M13Checkbox/Pods-eVote-M13Checkbox.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Alamofire;
+				PRODUCT_NAME = M13Checkbox;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -431,43 +539,36 @@
 			};
 			name = Release;
 		};
-		62344569293305D557FE89C0 /* Release */ = {
+		09F07D27E9B7A9CFDFE7D692 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5BFEE454C9B5EDFD995F852 /* Pods-eVote-M13Checkbox-Private.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-eVote-M13Checkbox/Pods-eVote-M13Checkbox-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-eVote-M13Checkbox/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-eVote-M13Checkbox/Pods-eVote-M13Checkbox.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = M13Checkbox;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		AEBB41B2A6B9934B23F632DE /* Release */ = {
+		1C50FF5D9B710AEF3A3CC0C3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC3AC782AD4FCA2043A306DA /* Pods-eVote-SwiftyJSON-Private.xcconfig */;
+			baseConfigurationReference = F5DF8866F7C93B895B17F463 /* Pods-eVote-SwiftyJSON-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -492,65 +593,7 @@
 			};
 			name = Release;
 		};
-		B66AA4B791AB3297E47B6275 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0FF4626810456340CB702D7 /* Pods-eVote-Alamofire-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-eVote-Alamofire/Pods-eVote-Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-eVote-Alamofire/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-eVote-Alamofire/Pods-eVote-Alamofire.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		CB7E244357CC48847D2E3E6B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 412577A610D828DC103EAA9C /* Pods-eVote.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-eVote/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-eVote/Pods-eVote.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_eVote;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DAF5945CC833567A1AE48282 /* Debug */ = {
+		2EEBC316451C6EA8E14E0E89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -589,9 +632,43 @@
 			};
 			name = Debug;
 		};
-		E970237E9825B4D50E7BFDA9 /* Debug */ = {
+		6E77EF44005FF373AD9F27E3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC3AC782AD4FCA2043A306DA /* Pods-eVote-SwiftyJSON-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C1B3D92D147DA20A54C58E12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C0C1725D68BA1EF9C30C1B5 /* Pods-eVote-Alamofire-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -600,14 +677,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-eVote-SwiftyJSON/Pods-eVote-SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-eVote-SwiftyJSON/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-eVote-Alamofire/Pods-eVote-Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-eVote-Alamofire/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-eVote-SwiftyJSON/Pods-eVote-SwiftyJSON.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-eVote-Alamofire/Pods-eVote-Alamofire.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SwiftyJSON;
+				PRODUCT_NAME = Alamofire;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -617,9 +694,66 @@
 			};
 			name = Debug;
 		};
-		FCC35C96280D82FA7CE90D96 /* Release */ = {
+		C7DC4A96C9D95A3D68CCFF87 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE9E46FD7E833F69015BFDBD /* Pods-eVote.release.xcconfig */;
+			baseConfigurationReference = 0C0C1725D68BA1EF9C30C1B5 /* Pods-eVote-Alamofire-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-eVote-Alamofire/Pods-eVote-Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-eVote-Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-eVote-Alamofire/Pods-eVote-Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D2EEC4119095CF0D86D6B0F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C87DB976040B3101E3E1F8C /* Pods-eVote.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-eVote/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-eVote/Pods-eVote.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_eVote;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F134A7FD2E8B268E916903F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA56C25A085ABC734D5D6DA0 /* Pods-eVote.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -646,46 +780,83 @@
 			};
 			name = Release;
 		};
+		F1AEC444AAA0238FA39C5977 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5DF8866F7C93B895B17F463 /* Pods-eVote-SwiftyJSON-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-eVote-SwiftyJSON/Pods-eVote-SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-eVote-SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-eVote-SwiftyJSON/Pods-eVote-SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		191A6CDFA5FFC103E0A70A7A /* Build configuration list for PBXProject "Pods" */ = {
+		277A97AFADFC23C4C2D77354 /* Build configuration list for PBXNativeTarget "Pods-eVote-M13Checkbox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DAF5945CC833567A1AE48282 /* Debug */,
-				62344569293305D557FE89C0 /* Release */,
+				09F07D27E9B7A9CFDFE7D692 /* Debug */,
+				06EB6D4D253E6C78CB1AEC91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58D7B22711D1BEA10772ACAA /* Build configuration list for PBXNativeTarget "Pods-eVote" */ = {
+		3F5FC0EFFF7B9ABA2C40AE80 /* Build configuration list for PBXNativeTarget "Pods-eVote-SwiftyJSON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CB7E244357CC48847D2E3E6B /* Debug */,
-				FCC35C96280D82FA7CE90D96 /* Release */,
+				F1AEC444AAA0238FA39C5977 /* Debug */,
+				1C50FF5D9B710AEF3A3CC0C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C02F9F9B803BEB55210C4C81 /* Build configuration list for PBXNativeTarget "Pods-eVote-Alamofire" */ = {
+		5C095943189024145E9BEB67 /* Build configuration list for PBXNativeTarget "Pods-eVote-Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B66AA4B791AB3297E47B6275 /* Debug */,
-				228E4C3D3EEAC366CEE00B0B /* Release */,
+				C1B3D92D147DA20A54C58E12 /* Debug */,
+				C7DC4A96C9D95A3D68CCFF87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D98914579CA7443E422DD859 /* Build configuration list for PBXNativeTarget "Pods-eVote-SwiftyJSON" */ = {
+		5E4ABB93AF2043B99C5BBD73 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E970237E9825B4D50E7BFDA9 /* Debug */,
-				AEBB41B2A6B9934B23F632DE /* Release */,
+				2EEBC316451C6EA8E14E0E89 /* Debug */,
+				6E77EF44005FF373AD9F27E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8961C23CFF103F7C83E87BF2 /* Build configuration list for PBXNativeTarget "Pods-eVote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2EEC4119095CF0D86D6B0F3 /* Debug */,
+				F134A7FD2E8B268E916903F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 970F2AEA06BB0A66616017FD /* Project object */;
+	rootObject = 7F78436FC32505A005248666 /* Project object */;
 }
