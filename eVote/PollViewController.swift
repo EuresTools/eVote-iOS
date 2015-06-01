@@ -58,6 +58,12 @@ class PollViewController: UITableViewController {
             let options = p["options"]!.arrayValue
             let option = options[indexPath.row].stringValue
             cell.optionLabel.text = option
+            if votes.contains(indexPath.row) {
+                cell.checkBox.checkState = M13CheckboxStateChecked
+            }
+            else {
+                cell.checkBox.checkState = M13CheckboxStateUnchecked
+            }
         }
         return cell
     }
@@ -72,41 +78,24 @@ class PollViewController: UITableViewController {
         
         // If this is a one choice poll, move the selection.
         if select == 1 {
-            cell.checkBox.toggleCheckState()
             if votes.contains(indexPath.row) {
                 votes.remove(indexPath.row)
             }
             else {
+                votes.removeAll(keepCapacity: false)
                 votes.insert(indexPath.row)
-            }
-            for (index,c) in enumerate(tableView.visibleCells() as! [PollOptionTableViewCell]) {
-                if c.checkBox.checkState.value == M13CheckboxStateChecked.value && c != cell {
-                    if votes.contains(index) {
-                        votes.remove(index)
-                    }
-                    else {
-                        votes.insert(index)
-                    }
-                    c.checkBox.toggleCheckState()
-                }
             }
         }
         else {
             // Prevent the user from selecting more options than allowed.
-            var count = 0
-            for cell in tableView.visibleCells() as! [PollOptionTableViewCell] {
-                if cell.checkBox.checkState.value == M13CheckboxStateChecked.value {
-                    count++
-                }
-            }
-            if count < select || cell.checkBox.checkState.value == M13CheckboxStateChecked.value {
+            let count = votes.count
+            if count < select || votes.contains(indexPath.row) {
                 if votes.contains(indexPath.row) {
                     votes.remove(indexPath.row)
                 }
                 else {
                     votes.insert(indexPath.row)
                 }
-                cell.checkBox.toggleCheckState()
             }
             else {
                 // User tried to select more options than allowed.
@@ -114,8 +103,12 @@ class PollViewController: UITableViewController {
                 alert("Not allowed", message: "You cannot select more than \(select) options.")
             }
         }
-        
+        updateUI()
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    func updateUI() {
+        self.tableView.reloadData()
     }
     
     @IBAction func didPressSubmitButton(sender: AnyObject) {
