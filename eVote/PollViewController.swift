@@ -118,8 +118,12 @@ class PollViewController: UITableViewController {
             let success = json["success"].boolValue
             let message = json["message"].stringValue
             if success {
-                self.alert("Success", message: message)
-                self.dismissViewControllerAnimated(true, completion: nil)
+                let alert = UIAlertController(title: "Success", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+                    (_) in
+                    self.navigationController!.popViewControllerAnimated(true)
+                }))
+                self.presentViewController(alert, animated: true, completion: nil)
             }
             else {
                 self.alert("Error", message: message)
