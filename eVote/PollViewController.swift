@@ -33,9 +33,11 @@ class PollViewController: UITableViewController {
         queryLabel.sizeToFit()
         headerView.frame.size.height = queryLabel.frame.height + 16
         
-        // Set the background color of the header.
+        // Set the background color of the header and footer.
         headerView.backgroundView = UIView(frame: headerView.bounds)
         headerView.backgroundView!.backgroundColor = UIColor.whiteColor()
+        footerView.backgroundView = UIView(frame: footerView.bounds)
+        footerView.backgroundView!.backgroundColor = UIColor.whiteColor()
     }
 
     // MARK: - Table view data source

@@ -59,26 +59,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="rH1-xM-PVm" customClass="UITableViewHeaderFooterView">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mai-PN-fz1">
-                                    <rect key="frame" x="258" y="7" width="84" height="30"/>
-                                    <state key="normal" title="Submit Vote">
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="didPressSubmitButton:" destination="Ank-fA-tbW" eventType="touchUpInside" id="dvT-Jx-1Iq"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="centerX" secondItem="mai-PN-fz1" secondAttribute="centerX" id="IKU-S8-hjn"/>
-                                <constraint firstAttribute="centerY" secondItem="mai-PN-fz1" secondAttribute="centerY" id="rNO-WC-Fgq"/>
-                            </constraints>
-                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" selectionStyle="none" indentationWidth="10" reuseIdentifier="PollOptionTableViewCell" id="bRm-LS-JXq" customClass="PollOptionTableViewCell" customModule="eVote" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
@@ -141,6 +121,26 @@
                         <constraint firstItem="M9o-bF-eWl" firstAttribute="top" secondItem="iry-HC-syt" secondAttribute="top" constant="8" id="3HQ-DK-aCT"/>
                         <constraint firstAttribute="trailing" secondItem="M9o-bF-eWl" secondAttribute="trailing" constant="8" id="BjH-lW-CJ3"/>
                         <constraint firstItem="M9o-bF-eWl" firstAttribute="leading" secondItem="iry-HC-syt" secondAttribute="leading" constant="8" id="nkb-8Q-0Il"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" id="rH1-xM-PVm" customClass="UITableViewHeaderFooterView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mai-PN-fz1">
+                            <rect key="frame" x="258" y="7" width="84" height="30"/>
+                            <state key="normal" title="Submit Vote">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="didPressSubmitButton:" destination="Ank-fA-tbW" eventType="touchUpInside" id="dvT-Jx-1Iq"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="mai-PN-fz1" secondAttribute="centerX" id="IKU-S8-hjn"/>
+                        <constraint firstAttribute="centerY" secondItem="mai-PN-fz1" secondAttribute="centerY" id="rNO-WC-Fgq"/>
                     </constraints>
                 </view>
             </objects>
