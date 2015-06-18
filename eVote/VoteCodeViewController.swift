@@ -38,20 +38,28 @@ class VoteCodeViewController: UIViewController {
             }
             
             let json = JSON(data!)
-            if let success = json["success"].bool {
-                if success {
-                    println("Success")
-                    let poll = json["poll"].dictionaryValue
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    var pollVC = storyboard.instantiateViewControllerWithIdentifier("PollViewController") as! PollViewController
-                    pollVC.poll = poll
-                    pollVC.code = code
-                    self.showViewController(pollVC, sender: nil)
+            if let status = json["status"].string {
+                println(status)
+                if status == "success" {
+                    // Extract the poll, pass the data to a new poll VC and push it.
+                    if let poll = json["data"].dictionary?["poll"]?.dictionary {
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        var pollVC = storyboard.instantiateViewControllerWithIdentifier("PollViewController") as! PollViewController
+                        pollVC.poll = poll
+                        pollVC.code = code
+                        self.showViewController(pollVC, sender: nil)
+                        self.codeField.text = ""
+                    }
+                }
+                else if status == "fail" {
+                    if let data = json["data"].dictionary {
+                        if let codeError = data["code"]?.string {
+                            self.alert("Error", message: codeError)
+                        }
+                    }
                 }
                 else {
-                    println("Failure")
-                    let message = json["message"].stringValue
-                    self.alert("Error", message: message)
+                    self.alert("Error", message: "Something went wrong")
                 }
             }
         }

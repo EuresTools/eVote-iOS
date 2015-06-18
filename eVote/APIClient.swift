@@ -16,15 +16,15 @@ class APIClient: NSObject {
     #else
     static var baseURL = "http://evoteapi.herokuapp.com"
     #endif
-    static let voteURL = "\(baseURL)/vote"
+    static let pollURL = "\(baseURL)/polls"
     
     static func getPollForCode(code: String, completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
-        Alamofire.request(.GET, voteURL, parameters: ["code": code])
+        Alamofire.request(.GET, pollURL, parameters: ["code": code])
         .responseJSON(options: NSJSONReadingOptions.allZeros, completionHandler: completionHandler)
     }
     
-    static func submitVoteForCode(code: String, votes: [Int], completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
-        Alamofire.request(.POST, voteURL, parameters: ["code": code, "votes": votes], encoding: .JSON)
+    static func submitVoteForCode(code: String, votes: [Int], pollId: Int, completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
+        Alamofire.request(.POST, "\(pollURL)/\(pollId)/votes", parameters: ["code": code, "options": votes], encoding: .JSON)
         .responseJSON(options: NSJSONReadingOptions.allZeros, completionHandler: completionHandler)
     }
 }
