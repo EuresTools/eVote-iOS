@@ -11,20 +11,35 @@ import Alamofire
 
 class APIClient: NSObject {
     
-    #if (arch(i386) || arch(x86_64)) && os(iOS)
-    static var baseURL = "http://localhost:5000"
-    #else
-    static var baseURL = "http://evoteapi.herokuapp.com"
-    #endif
-    static let pollURL = "\(baseURL)/polls"
+    static var defaultBaseURL = "http://localhost:82/v1"
+    static let pollURL = "\(APIClient.getBaseURL())/poll"
+    static let voteURL = "\(APIClient.getBaseURL())/vote"
+    
+    static func getBaseURL() -> String {
+        var baseURL = NSUserDefaults.standardUserDefaults().stringForKey("baseURL")
+        if baseURL == nil {
+            baseURL = defaultBaseURL
+        }
+        return baseURL!
+    }
     
     static func getPollForCode(code: String, completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
-        Alamofire.request(.GET, pollURL, parameters: ["code": code])
+        Alamofire.request(.GET, "\(pollURL)/get", parameters: ["token": code])
         .responseJSON(options: NSJSONReadingOptions.allZeros, completionHandler: completionHandler)
     }
     
-    static func submitVoteForCode(code: String, votes: [Int], pollId: Int, completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
-        Alamofire.request(.POST, "\(pollURL)/\(pollId)/votes", parameters: ["code": code, "options": votes], encoding: .JSON)
-        .responseJSON(options: NSJSONReadingOptions.allZeros, completionHandler: completionHandler)
+    static func submitVoteForCode(code: String, votes: [Option], completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
+        
+        let urlString = "\(voteURL)/submit"
+        let tempURLRequest = NSURLRequest(URL: NSURL(string: urlString)!)
+        let URLRequest = ParameterEncoding.URL.encode(tempURLRequest, parameters: ["token": code])
+        let voteIDs = votes.map({option in option.id!})
+        let bodyRequest = ParameterEncoding.JSON.encode(tempURLRequest, parameters: ["options": voteIDs])
+        
+        let compositeRequest = URLRequest.0.mutableCopy() as! NSMutableURLRequest
+        compositeRequest.HTTPMethod = "POST"
+        compositeRequest.HTTPBody = bodyRequest.0.HTTPBody
+        compositeRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        Alamofire.request(compositeRequest).responseJSON(options: NSJSONReadingOptions.allZeros, completionHandler: completionHandler)
     }
 }

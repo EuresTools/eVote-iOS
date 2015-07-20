@@ -16,6 +16,8 @@
 		119A5E891B0C7AC50057DDC6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 119A5E871B0C7AC50057DDC6 /* LaunchScreen.xib */; };
 		119A5E951B0C7AC50057DDC6 /* eVoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119A5E941B0C7AC50057DDC6 /* eVoteTests.swift */; };
 		11C10CDD1B0CB31900C40C01 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C10CDC1B0CB31900C40C01 /* APIClient.swift */; };
+		11E02DEB1B5CDA0D00998F6D /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E02DEA1B5CDA0D00998F6D /* Option.swift */; };
+		11E02DED1B5CDA3000998F6D /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E02DEC1B5CDA3000998F6D /* Poll.swift */; };
 		1AD228B3053FED034A8D6450 /* Pods_eVote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A4030B39DC20B13B2719F4 /* Pods_eVote.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		119A5E931B0C7AC50057DDC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		119A5E941B0C7AC50057DDC6 /* eVoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eVoteTests.swift; sourceTree = "<group>"; };
 		11C10CDC1B0CB31900C40C01 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		11E02DEA1B5CDA0D00998F6D /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		11E02DEC1B5CDA3000998F6D /* Poll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poll.swift; sourceTree = "<group>"; };
 		78A3652DDA4488E9CA457B62 /* Pods-eVote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eVote.release.xcconfig"; path = "Pods/Target Support Files/Pods-eVote/Pods-eVote.release.xcconfig"; sourceTree = "<group>"; };
 		94A4030B39DC20B13B2719F4 /* Pods_eVote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eVote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0372CAEA01FDDE010034979 /* Pods-eVote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eVote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eVote/Pods-eVote.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,10 +96,11 @@
 			children = (
 				119A5E7E1B0C7AC50057DDC6 /* AppDelegate.swift */,
 				119A5E801B0C7AC50057DDC6 /* VoteCodeViewController.swift */,
+				111874D71B0CCDA700D77686 /* PollViewController.swift */,
 				11C10CDC1B0CB31900C40C01 /* APIClient.swift */,
 				119A5E821B0C7AC50057DDC6 /* Main.storyboard */,
-				111874D71B0CCDA700D77686 /* PollViewController.swift */,
 				11993ED91B0DC1E40021D01D /* PollOptionTableViewCell.swift */,
+				11E02DE91B5CD9D500998F6D /* Models */,
 				119A5E851B0C7AC50057DDC6 /* Images.xcassets */,
 				119A5E871B0C7AC50057DDC6 /* LaunchScreen.xib */,
 				119A5E7C1B0C7AC50057DDC6 /* Supporting Files */,
@@ -126,6 +131,15 @@
 				119A5E931B0C7AC50057DDC6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11E02DE91B5CD9D500998F6D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				11E02DEA1B5CDA0D00998F6D /* Option.swift */,
+				11E02DEC1B5CDA3000998F6D /* Poll.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		8BDD1B6FF3133208BD8E04FB /* Frameworks */ = {
@@ -301,7 +315,9 @@
 				119A5E811B0C7AC50057DDC6 /* VoteCodeViewController.swift in Sources */,
 				119A5E7F1B0C7AC50057DDC6 /* AppDelegate.swift in Sources */,
 				11C10CDD1B0CB31900C40C01 /* APIClient.swift in Sources */,
+				11E02DED1B5CDA3000998F6D /* Poll.swift in Sources */,
 				11993EDA1B0DC1E40021D01D /* PollOptionTableViewCell.swift in Sources */,
+				11E02DEB1B5CDA0D00998F6D /* Option.swift in Sources */,
 				111874D81B0CCDA700D77686 /* PollViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -52,3 +52,5 @@ DerivedData
 
 Carthage/Build
 
+# R.swift
+*.generated.swift

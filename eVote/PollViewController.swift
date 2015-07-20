@@ -12,12 +12,11 @@ import M13Checkbox
 
 class PollViewController: UITableViewController {
     
-    var poll: Dictionary<String, JSON>?
-    var options: [String] = []
-    var optionIds: [Int] = []
+    var poll: Poll?
     var code = ""
-    var votes: Set<Int> = []
+    var votes: Set<Option> = []
     @IBOutlet weak var queryLabel: UILabel!
+    @IBOutlet weak var selectionLabel: UILabel!
     @IBOutlet var headerView: UITableViewHeaderFooterView!
     @IBOutlet weak var footerView: UITableViewHeaderFooterView!
 
@@ -26,10 +25,30 @@ class PollViewController: UITableViewController {
         super.viewDidLoad()
         headerView.frame.size.width = self.view.bounds.width
         
-        let query = poll!["question"]!.stringValue
+        let title = poll!.title
+        self.title = title
+        // Don't truncate the title in the navigation bar.
+        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+        titleLabel.numberOfLines = 0
+        titleLabel.textAlignment = .Center
+        titleLabel.text = title
+        titleLabel.textColor = UIColor.blackColor()
+        titleLabel.font = UIFont(name: "Helvetica-Bold", size: 17.0)
+        titleLabel.backgroundColor = UIColor.clearColor()
+        titleLabel.adjustsFontSizeToFitWidth = true
+        self.navigationItem.titleView = titleLabel
+        
+        let query = poll!.question
         
         queryLabel.text = query
         queryLabel.textAlignment = NSTextAlignment.Justified
+        
+        let min = poll!.select_min!
+        let max = poll!.select_max!
+        let selectionString = min == max ? "\(min)" : "\(min) - \(max)"
+        let optionString = min == 1 && max == 1 ? "option" : "options"
+        
+        selectionLabel.text = "Select \(selectionString) \(optionString)"
         
         // Adjust the header view to fit the query text.
         queryLabel.sizeToFit()
@@ -40,14 +59,6 @@ class PollViewController: UITableViewController {
         headerView.backgroundView!.backgroundColor = UIColor.whiteColor()
         footerView.backgroundView = UIView(frame: footerView.bounds)
         footerView.backgroundView!.backgroundColor = UIColor.whiteColor()
-        
-        if let p = poll {
-            let jsoptions = p["options"]!.arrayValue
-            for option in jsoptions {
-                options.append(option["option"].stringValue)
-                optionIds.append(option["id"].intValue)
-            }
-        }
     }
 
     // MARK: - Table view data source
@@ -57,20 +68,17 @@ class PollViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return options.count
+        return poll!.options.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("PollOptionTableViewCell", forIndexPath: indexPath) as! PollOptionTableViewCell
-        if let p = poll {
-            let option = options[indexPath.row]
-            cell.optionLabel.text = option
-            if votes.contains(optionIds[indexPath.row]) {
-                cell.checkBox.checkState = M13CheckboxStateChecked
-            }
-            else {
-                cell.checkBox.checkState = M13CheckboxStateUnchecked
-            }
+        let option = poll!.options[indexPath.row]
+        cell.optionLabel.text = option.text
+        if votes.contains(option) {
+            cell.checkBox.checkState = M13CheckboxStateChecked
+        } else {
+            cell.checkBox.checkState = M13CheckboxStateUnchecked
         }
         return cell
     }
@@ -80,34 +88,34 @@ class PollViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let select = poll!["select_max"]!.intValue
+        let select = poll!.select_max!
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! PollOptionTableViewCell
+        let option = poll!.options[indexPath.row]
         
         // If this is a one choice poll, move the selection.
         if select == 1 {
-            if votes.contains(optionIds[indexPath.row]) {
-                votes.remove(optionIds[indexPath.row])
+            if votes.contains(option) {
+                votes.remove(option)
             }
             else {
                 votes.removeAll(keepCapacity: false)
-                votes.insert(optionIds[indexPath.row])
+                votes.insert(option)
             }
         }
         else {
             // Prevent the user from selecting more options than allowed.
             let count = votes.count
-            if count < select || votes.contains(optionIds[indexPath.row]) {
-                if votes.contains(optionIds[indexPath.row]) {
-                    votes.remove(optionIds[indexPath.row])
-                }
-                else {
-                    votes.insert(optionIds[indexPath.row])
-                }
+            if votes.contains(option) {
+                votes.remove(option)
+            }
+            else if(count < select) {
+                votes.insert(option)
             }
             else {
                 // User tried to select more options than allowed.
                 println("Can't select more options")
-                alert("Not allowed", message: "You cannot select more than \(select) options.")
+                let optionStr = select == 1 ? "option" : "options"
+                alert("Not allowed", message: "You cannot select more than \(select) \(optionStr).")
             }
         }
         updateUI()
@@ -119,39 +127,33 @@ class PollViewController: UITableViewController {
     }
     
     @IBAction func didPressSubmitButton(sender: AnyObject) {
-        APIClient.submitVoteForCode(code, votes: Array(votes), pollId: poll!["id"]!.intValue, completionHandler: {
+        APIClient.submitVoteForCode(code, votes: Array(votes), completionHandler: {
             (request: NSURLRequest, response: NSURLResponse?, data: AnyObject?, error: NSError?) in
-            let minimum = self.poll!["select_min"]!.intValue
-            if self.votes.count < minimum {
-                var options = "options"
-                if minimum == 1 {
-                    options = "option"
-                }
-                self.alert("Error", message: "You must select at least \(minimum) \(options).")
+            if let _error = error {
+                println("An error occurred!")
+                self.alert("Error", message: "An error occurred. Try again later.")
+                return
             }
-            else {
-                let json = JSON(data!)
-                let status = json["status"].string
-                let success = status == "success"
-                if success {
-                    let alert = UIAlertController(title: "Success", message: "Vote submitted successfully.", preferredStyle: UIAlertControllerStyle.Alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
-                        (_) in
-                        self.navigationController!.popViewControllerAnimated(true)
-                    }))
-                    self.presentViewController(alert, animated: true, completion: nil)
-                }
-                else {
-                    var message = "Something went wrong."
-                    if let error = json["data"].dictionary?["code"]?.string {
-                        message = error
-                    }
-                    else if let error = json["data"].dictionary?["options"]?.string {
-                        message = error
-                    }
+            let json = JSON(data!)
+            let success = json["success"].boolValue
+            if !success {
+                // Check if we hit the auth filter.
+                let status = json["status"].intValue
+                if status == 401 {
+                    self.alert("Error", message: "Invalid voting code")
+                } else {
+                    let error = json["error"]
+                    let message = error["message"].stringValue
                     self.alert("Error", message: message)
                 }
+                return
             }
+            let alert = UIAlertController(title: "Success", message: "Your vote has been submitted.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+                (_) in
+                self.navigationController!.popViewControllerAnimated(true)
+            }))
+            self.presentViewController(alert, animated: true, completion: nil)
         })
     }
     

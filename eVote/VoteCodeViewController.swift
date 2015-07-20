@@ -38,30 +38,27 @@ class VoteCodeViewController: UIViewController {
             }
             
             let json = JSON(data!)
-            if let status = json["status"].string {
-                println(status)
-                if status == "success" {
-                    // Extract the poll, pass the data to a new poll VC and push it.
-                    if let poll = json["data"].dictionary?["poll"]?.dictionary {
-                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                        var pollVC = storyboard.instantiateViewControllerWithIdentifier("PollViewController") as! PollViewController
-                        pollVC.poll = poll
-                        pollVC.code = code
-                        self.showViewController(pollVC, sender: nil)
-                        self.codeField.text = ""
-                    }
+            let success = json["success"].boolValue
+            if !success {
+                // Check if we hit the auth filter.
+                let status = json["status"].intValue
+                if status == 401 {
+                    self.alert("Error", message: "Invalid voting code")
+                } else {
+                    let error = json["error"]
+                    let message = error["message"].stringValue
+                    self.alert("Error", message: message)
                 }
-                else if status == "fail" {
-                    if let data = json["data"].dictionary {
-                        if let codeError = data["code"]?.string {
-                            self.alert("Error", message: codeError)
-                        }
-                    }
-                }
-                else {
-                    self.alert("Error", message: "Something went wrong")
-                }
+                return
             }
+            let pollJSON = json["data"]
+            let poll = self.pollFromJson(pollJSON)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let pollVC = storyboard.instantiateViewControllerWithIdentifier("PollViewController") as! PollViewController
+            pollVC.poll = poll
+            pollVC.code = code
+            self.showViewController(pollVC, sender: nil)
+            self.codeField.text = ""
         }
     }
     
@@ -69,5 +66,20 @@ class VoteCodeViewController: UIViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func pollFromJson(json: JSON) -> Poll {
+        let poll = Poll()
+        poll.title = json["title"].stringValue
+        poll.question = json["question"].stringValue
+        poll.select_min = json["select_min"].intValue
+        poll.select_max = json["select_max"].intValue
+        for optionJSON in json["options"].arrayValue {
+            let option = Option()
+            option.id = optionJSON["id"].intValue
+            option.text = optionJSON["text"].stringValue
+            poll.options.append(option)
+        }
+        return poll
     }
 }

@@ -101,11 +101,42 @@
                         <outlet property="footerView" destination="rH1-xM-PVm" id="OmE-BB-ilO"/>
                         <outlet property="headerView" destination="iry-HC-syt" id="gaB-CC-cEv"/>
                         <outlet property="queryLabel" destination="M9o-bF-eWl" id="Ruo-LN-9hH"/>
+                        <outlet property="selectionLabel" destination="te3-Uz-Xlt" id="wet-UE-sFM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6y-Bf-bo6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="rH1-xM-PVm" customClass="UITableViewHeaderFooterView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mai-PN-fz1">
+                            <rect key="frame" x="258" y="18" width="84" height="30"/>
+                            <state key="normal" title="Submit Vote">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="didPressSubmitButton:" destination="Ank-fA-tbW" eventType="touchUpInside" id="dvT-Jx-1Iq"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="te3-Uz-Xlt">
+                            <rect key="frame" x="8" y="0.0" width="584" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="mai-PN-fz1" secondAttribute="centerX" id="IKU-S8-hjn"/>
+                        <constraint firstItem="te3-Uz-Xlt" firstAttribute="leading" secondItem="rH1-xM-PVm" secondAttribute="leading" constant="8" id="QuM-KH-nu7"/>
+                        <constraint firstAttribute="trailing" secondItem="te3-Uz-Xlt" secondAttribute="trailing" constant="8" id="XsM-aF-v4o"/>
+                        <constraint firstAttribute="centerY" secondItem="mai-PN-fz1" secondAttribute="centerY" constant="-0.5" id="ZmI-aa-1Oq"/>
+                        <constraint firstItem="te3-Uz-Xlt" firstAttribute="top" secondItem="rH1-xM-PVm" secondAttribute="top" id="oU8-U8-SoP"/>
+                        <constraint firstItem="mai-PN-fz1" firstAttribute="top" secondItem="te3-Uz-Xlt" secondAttribute="bottom" constant="-3" id="zNZ-7U-1Ex"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" id="iry-HC-syt" customClass="UITableViewHeaderFooterView">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9o-bF-eWl">
@@ -121,26 +152,6 @@
                         <constraint firstItem="M9o-bF-eWl" firstAttribute="top" secondItem="iry-HC-syt" secondAttribute="top" constant="8" id="3HQ-DK-aCT"/>
                         <constraint firstAttribute="trailing" secondItem="M9o-bF-eWl" secondAttribute="trailing" constant="8" id="BjH-lW-CJ3"/>
                         <constraint firstItem="M9o-bF-eWl" firstAttribute="leading" secondItem="iry-HC-syt" secondAttribute="leading" constant="8" id="nkb-8Q-0Il"/>
-                    </constraints>
-                </view>
-                <view contentMode="scaleToFill" id="rH1-xM-PVm" customClass="UITableViewHeaderFooterView">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mai-PN-fz1">
-                            <rect key="frame" x="258" y="7" width="84" height="30"/>
-                            <state key="normal" title="Submit Vote">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="didPressSubmitButton:" destination="Ank-fA-tbW" eventType="touchUpInside" id="dvT-Jx-1Iq"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="centerX" secondItem="mai-PN-fz1" secondAttribute="centerX" id="IKU-S8-hjn"/>
-                        <constraint firstAttribute="centerY" secondItem="mai-PN-fz1" secondAttribute="centerY" id="rNO-WC-Fgq"/>
                     </constraints>
                 </view>
             </objects>
