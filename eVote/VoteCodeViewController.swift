@@ -19,6 +19,17 @@ class VoteCodeViewController: UIViewController {
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tappedOutside:")
         self.view.addGestureRecognizer(tapGestureRecognizer)
+        loadPassedToken()
+    }
+    
+    func loadPassedToken() {
+        if(self.isViewLoaded()) {
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            if let token = appDelegate.passedToken {
+                self.codeField.text = token
+                appDelegate.passedToken = nil
+            }
+        }
     }
     
     func tappedOutside(gesture: UITapGestureRecognizer) {

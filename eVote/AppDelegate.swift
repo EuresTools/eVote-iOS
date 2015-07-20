@@ -12,6 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var passedToken: String?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -41,6 +42,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+        if let query = url.query {
+            let params = query.componentsSeparatedByString("&")
+            for param in params {
+                let arr = param.componentsSeparatedByString("=")
+                let key = arr[0]
+                let value = arr[1]
+                if key == "token" {
+                    passedToken = value
+                }
+                else if key == "host" {
+                    let userDefaults = NSUserDefaults.standardUserDefaults()
+                    userDefaults.setValue(value, forKey: "baseURL")
+                    userDefaults.synchronize()
+                }
+            }
+        }
+        // Go to the token view.
+        let navVC = self.window?.rootViewController as! UINavigationController?
+        navVC?.popToRootViewControllerAnimated(false)
+        let tokenVC = navVC?.topViewController as! VoteCodeViewController?
+        tokenVC?.loadPassedToken()
+        return true
+    }
 }
 

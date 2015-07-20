@@ -11,12 +11,12 @@ import Alamofire
 
 class APIClient: NSObject {
     
-    static var defaultBaseURL = "http://localhost:82/v1"
-    static let pollURL = "\(APIClient.getBaseURL())/poll"
-    static let voteURL = "\(APIClient.getBaseURL())/vote"
+    static var defaultBaseURL = "http://localhost:82"
+//    static let pollURL = "\(APIClient.getBaseURL())/poll"
+//    static let voteURL = "\(APIClient.getBaseURL())/vote"
     
     static func getBaseURL() -> String {
-        var baseURL = NSUserDefaults.standardUserDefaults().stringForKey("baseURL")
+        var baseURL = NSUserDefaults.standardUserDefaults().valueForKey("baseURL") as! String?
         if baseURL == nil {
             baseURL = defaultBaseURL
         }
@@ -24,13 +24,13 @@ class APIClient: NSObject {
     }
     
     static func getPollForCode(code: String, completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
-        Alamofire.request(.GET, "\(pollURL)/get", parameters: ["token": code])
+        Alamofire.request(.GET, "\(getBaseURL())/v1/poll/get", parameters: ["token": code])
         .responseJSON(options: NSJSONReadingOptions.allZeros, completionHandler: completionHandler)
     }
     
     static func submitVoteForCode(code: String, votes: [Option], completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {
         
-        let urlString = "\(voteURL)/submit"
+        let urlString = "\(getBaseURL())/v1/vote/submit"
         let tempURLRequest = NSURLRequest(URL: NSURL(string: urlString)!)
         let URLRequest = ParameterEncoding.URL.encode(tempURLRequest, parameters: ["token": code])
         let voteIDs = votes.map({option in option.id!})
