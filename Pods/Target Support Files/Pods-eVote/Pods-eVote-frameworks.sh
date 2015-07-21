@@ -54,10 +54,12 @@ code_sign_if_enabled() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-eVote/Alamofire.framework'
   install_framework 'Pods-eVote/M13Checkbox.framework'
+  install_framework 'Pods-eVote/MBProgressHUD.framework'
   install_framework 'Pods-eVote/SwiftyJSON.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-eVote/Alamofire.framework'
   install_framework 'Pods-eVote/M13Checkbox.framework'
+  install_framework 'Pods-eVote/MBProgressHUD.framework'
   install_framework 'Pods-eVote/SwiftyJSON.framework'
 fi

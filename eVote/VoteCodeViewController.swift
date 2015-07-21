@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import MBProgressHUD
 
 class VoteCodeViewController: UIViewController {
 
@@ -38,10 +39,12 @@ class VoteCodeViewController: UIViewController {
     }
     
     @IBAction func didPressSubmitButton(sender: AnyObject) {
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         let code = codeField.text
         APIClient.getPollForCode(code) {
             (request: NSURLRequest, response: NSURLResponse?, data: AnyObject?, error: NSError?) in
             
+            MBProgressHUD.hideHUDForView(self.view, animated: true)
             if let _error = error {
                 println("An error occurred!")
                 println(_error)

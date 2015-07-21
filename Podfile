@@ -7,6 +7,7 @@ target 'eVote' do
 pod 'Alamofire', '~> 1.2'
 pod 'SwiftyJSON', '~> 2.2'
 pod 'M13Checkbox', '~> 1.1'
+pod 'MBProgressHUD', '~> 0.9'
 
 end
 

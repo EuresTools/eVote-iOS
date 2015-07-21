@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyJSON
 import M13Checkbox
+import MBProgressHUD
 
 class PollViewController: UITableViewController {
     
@@ -143,8 +144,10 @@ class PollViewController: UITableViewController {
     }
     
     @IBAction func didPressSubmitButton(sender: AnyObject) {
+        MBProgressHUD.showHUDAddedTo(self.tableView, animated: true)
         APIClient.submitVoteForCode(code, votes: Array(votes), completionHandler: {
             (request: NSURLRequest, response: NSURLResponse?, data: AnyObject?, error: NSError?) in
+            MBProgressHUD.hideHUDForView(self.tableView, animated: true)
             if let _error = error {
                 println("An error occurred!")
                 println(_error)
