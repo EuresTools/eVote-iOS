@@ -11,16 +11,21 @@ import Alamofire
 
 class APIClient: NSObject {
     
+//    static var defaultBaseURL = "http://212.126.217.91:83"
     static var defaultBaseURL = "http://localhost:82"
 //    static let pollURL = "\(APIClient.getBaseURL())/poll"
 //    static let voteURL = "\(APIClient.getBaseURL())/vote"
     
     static func getBaseURL() -> String {
-        var baseURL = NSUserDefaults.standardUserDefaults().valueForKey("baseURL") as! String?
-        if baseURL == nil {
-            baseURL = defaultBaseURL
-        }
-        return baseURL!
+//        var baseURL = NSUserDefaults.standardUserDefaults().valueForKey("baseURL") as! String?
+//        if baseURL == nil {
+//            baseURL = defaultBaseURL
+//        }
+//        else if !baseURL!.startsWith("http://") && !baseURL!.startsWith("https://") {
+//            baseURL = "http://\(baseURL!)"
+//        }
+//        return baseURL!
+        return defaultBaseURL
     }
     
     static func getPollForCode(code: String, completionHandler: (NSURLRequest, NSHTTPURLResponse?, AnyObject?, NSError?) -> Void) {

@@ -52,11 +52,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 if key == "token" {
                     passedToken = value
                 }
-                else if key == "host" {
-                    let userDefaults = NSUserDefaults.standardUserDefaults()
-                    userDefaults.setValue(value, forKey: "baseURL")
-                    userDefaults.synchronize()
-                }
+//                else if key == "host" {
+//                    let userDefaults = NSUserDefaults.standardUserDefaults()
+//                    userDefaults.setValue(value, forKey: "baseURL")
+//                    userDefaults.synchronize()
+//                }
             }
         }
         // Go to the token view.

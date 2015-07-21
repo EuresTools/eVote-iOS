@@ -109,8 +109,14 @@
                     <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="te3-Uz-Xlt">
+                            <rect key="frame" x="8" y="8" width="584" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mai-PN-fz1">
-                            <rect key="frame" x="258" y="18" width="84" height="30"/>
+                            <rect key="frame" x="258" y="27" width="84" height="30"/>
                             <state key="normal" title="Submit Vote">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -118,21 +124,14 @@
                                 <action selector="didPressSubmitButton:" destination="Ank-fA-tbW" eventType="touchUpInside" id="dvT-Jx-1Iq"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="te3-Uz-Xlt">
-                            <rect key="frame" x="8" y="0.0" width="584" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="mai-PN-fz1" firstAttribute="top" secondItem="te3-Uz-Xlt" secondAttribute="bottom" constant="-2" id="00f-lR-MzF"/>
                         <constraint firstAttribute="centerX" secondItem="mai-PN-fz1" secondAttribute="centerX" id="IKU-S8-hjn"/>
                         <constraint firstItem="te3-Uz-Xlt" firstAttribute="leading" secondItem="rH1-xM-PVm" secondAttribute="leading" constant="8" id="QuM-KH-nu7"/>
                         <constraint firstAttribute="trailing" secondItem="te3-Uz-Xlt" secondAttribute="trailing" constant="8" id="XsM-aF-v4o"/>
-                        <constraint firstAttribute="centerY" secondItem="mai-PN-fz1" secondAttribute="centerY" constant="-0.5" id="ZmI-aa-1Oq"/>
-                        <constraint firstItem="te3-Uz-Xlt" firstAttribute="top" secondItem="rH1-xM-PVm" secondAttribute="top" id="oU8-U8-SoP"/>
-                        <constraint firstItem="mai-PN-fz1" firstAttribute="top" secondItem="te3-Uz-Xlt" secondAttribute="bottom" constant="-3" id="zNZ-7U-1Ex"/>
+                        <constraint firstItem="te3-Uz-Xlt" firstAttribute="top" secondItem="rH1-xM-PVm" secondAttribute="top" constant="8" id="qLU-dh-PNa"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" id="iry-HC-syt" customClass="UITableViewHeaderFooterView">
@@ -142,7 +141,7 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9o-bF-eWl">
                             <rect key="frame" x="8" y="8" width="584" height="44"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -155,7 +154,7 @@
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="2226" y="286"/>
+            <point key="canvasLocation" x="2225" y="286"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ccJ-Yq-22d">

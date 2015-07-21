@@ -44,6 +44,7 @@ class VoteCodeViewController: UIViewController {
             
             if let _error = error {
                 println("An error occurred!")
+                println(_error)
                 self.alert("Error", message: "An error occurred. Try again later.")
                 return
             }

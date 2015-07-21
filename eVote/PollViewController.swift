@@ -59,6 +59,22 @@ class PollViewController: UITableViewController {
         headerView.backgroundView!.backgroundColor = UIColor.whiteColor()
         footerView.backgroundView = UIView(frame: footerView.bounds)
         footerView.backgroundView!.backgroundColor = UIColor.whiteColor()
+        
+        headerView.backgroundView!.alpha = 0.9
+        footerView.backgroundView!.alpha = 0.9
+        
+        // Add borders to header and footer.
+        let headerBorder = CALayer()
+        let headerFrame = headerView.frame
+        headerBorder.frame = CGRect(x: headerFrame.minX, y: headerFrame.maxY, width: headerFrame.width, height: 1.0)
+        headerBorder.backgroundColor = UIColor.lightGrayColor().CGColor
+        headerView.layer.addSublayer(headerBorder)
+        
+        let footerBorder = CALayer()
+        let footerFrame = footerView.frame
+        footerBorder.frame = CGRect(x: footerFrame.minX, y: footerFrame.minY, width: footerFrame.width, height: 1.0)
+        footerBorder.backgroundColor = UIColor.lightGrayColor().CGColor
+        footerView.layer.addSublayer(footerBorder)
     }
 
     // MARK: - Table view data source
@@ -131,6 +147,7 @@ class PollViewController: UITableViewController {
             (request: NSURLRequest, response: NSURLResponse?, data: AnyObject?, error: NSError?) in
             if let _error = error {
                 println("An error occurred!")
+                println(_error)
                 self.alert("Error", message: "An error occurred. Try again later.")
                 return
             }
