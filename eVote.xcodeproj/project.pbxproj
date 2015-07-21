@@ -16,6 +16,7 @@
 		119A5E891B0C7AC50057DDC6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 119A5E871B0C7AC50057DDC6 /* LaunchScreen.xib */; };
 		119A5E951B0C7AC50057DDC6 /* eVoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119A5E941B0C7AC50057DDC6 /* eVoteTests.swift */; };
 		11C10CDD1B0CB31900C40C01 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C10CDC1B0CB31900C40C01 /* APIClient.swift */; };
+		11D727E81B5E2B3000E06C33 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D727E71B5E2B3000E06C33 /* String+.swift */; };
 		11E02DEB1B5CDA0D00998F6D /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E02DEA1B5CDA0D00998F6D /* Option.swift */; };
 		11E02DED1B5CDA3000998F6D /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E02DEC1B5CDA3000998F6D /* Poll.swift */; };
 		1AD228B3053FED034A8D6450 /* Pods_eVote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A4030B39DC20B13B2719F4 /* Pods_eVote.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -45,6 +46,7 @@
 		119A5E931B0C7AC50057DDC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		119A5E941B0C7AC50057DDC6 /* eVoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eVoteTests.swift; sourceTree = "<group>"; };
 		11C10CDC1B0CB31900C40C01 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		11D727E71B5E2B3000E06C33 /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		11E02DEA1B5CDA0D00998F6D /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		11E02DEC1B5CDA3000998F6D /* Poll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poll.swift; sourceTree = "<group>"; };
 		78A3652DDA4488E9CA457B62 /* Pods-eVote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eVote.release.xcconfig"; path = "Pods/Target Support Files/Pods-eVote/Pods-eVote.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				119A5E821B0C7AC50057DDC6 /* Main.storyboard */,
 				11993ED91B0DC1E40021D01D /* PollOptionTableViewCell.swift */,
 				11E02DE91B5CD9D500998F6D /* Models */,
+				11D727E61B5E2B0F00E06C33 /* Extensions */,
 				119A5E851B0C7AC50057DDC6 /* Images.xcassets */,
 				119A5E871B0C7AC50057DDC6 /* LaunchScreen.xib */,
 				119A5E7C1B0C7AC50057DDC6 /* Supporting Files */,
@@ -131,6 +134,14 @@
 				119A5E931B0C7AC50057DDC6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11D727E61B5E2B0F00E06C33 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				11D727E71B5E2B3000E06C33 /* String+.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		11E02DE91B5CD9D500998F6D /* Models */ = {
@@ -314,6 +325,7 @@
 			files = (
 				119A5E811B0C7AC50057DDC6 /* VoteCodeViewController.swift in Sources */,
 				119A5E7F1B0C7AC50057DDC6 /* AppDelegate.swift in Sources */,
+				11D727E81B5E2B3000E06C33 /* String+.swift in Sources */,
 				11C10CDD1B0CB31900C40C01 /* APIClient.swift in Sources */,
 				11E02DED1B5CDA3000998F6D /* Poll.swift in Sources */,
 				11993EDA1B0DC1E40021D01D /* PollOptionTableViewCell.swift in Sources */,
