@@ -55,15 +55,9 @@ class VoteCodeViewController: UIViewController {
             let json = JSON(data!)
             let success = json["success"].boolValue
             if !success {
-                // Check if we hit the auth filter.
-                let status = json["status"].intValue
-                if status == 401 {
-                    self.alert("Error", message: "Invalid voting code")
-                } else {
-                    let error = json["error"]
-                    let message = error["message"].stringValue
-                    self.alert("Error", message: message)
-                }
+                let error = json["error"]
+                let message = error["message"].stringValue
+                self.alert("Error", message: message)
                 return
             }
             let pollJSON = json["data"]
